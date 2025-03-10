@@ -587,9 +587,10 @@ def config_parser():
                         help='frequency of tensorboard image logging')
     parser.add_argument("--i_weights", type=int, default=10000, 
                         help='frequency of weight ckpt saving')
-    parser.add_argument("--i_testset", type=int, default=50000, 
+    parser.add_argument("--i_testset", type=int, default=30000, 
                         help='frequency of testset saving')
-    parser.add_argument("--i_video",   type=int, default=50000, 
+            # Original value = default = 30000
+    parser.add_argument("--i_video",   type=int, default=49999, 
                         help='frequency of render_poses video saving')
     
     # debug
