@@ -440,7 +440,6 @@ def load_sensor_depth(basedir, factor=8, bd_factor=.75):
 
 def load_colmap_llff(basedir):
     basedir = Path(basedir)
-    print("Basedir", basedir)
     train_imgs = np.load(basedir / 'train_images.npy')
     test_imgs = np.load(basedir / 'test_images.npy')
     train_poses = np.load(basedir / 'train_poses.npy')

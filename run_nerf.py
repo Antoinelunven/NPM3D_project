@@ -595,8 +595,9 @@ def config_parser():
     parser.add_argument("--debug",  action='store_true')
 
     # new experiment by kangle
-    parser.add_argument("--N_iters", type=int, default=20000,
+    parser.add_argument("--N_iters", type=int, default=10000,
                         help='number of iters')
+            # original value = default = 20000
     parser.add_argument("--alpha_model_path", type=str, default=None,
                         help='predefined alpha model')
     parser.add_argument("--no_coarse", action='store_true',
