@@ -497,8 +497,9 @@ def config_parser():
                         help='layers in fine network')
     parser.add_argument("--netwidth_fine", type=int, default=256, 
                         help='channels per layer in fine network')
-    parser.add_argument("--N_rand", type=int, default=32*32*4, 
+    parser.add_argument("--N_rand", type=int, default=32*32*8, 
                         help='batch size (number of random rays per gradient step)')
+            # original value = defalut = 32*32*4
     parser.add_argument("--lrate", type=float, default=5e-4, 
                         help='learning rate')
     parser.add_argument("--lrate_decay", type=int, default=250, 
@@ -595,7 +596,7 @@ def config_parser():
     parser.add_argument("--debug",  action='store_true')
 
     # new experiment by kangle
-    parser.add_argument("--N_iters", type=int, default=10000,
+    parser.add_argument("--N_iters", type=int, default=20000,
                         help='number of iters')
             # original value = default = 20000
     parser.add_argument("--alpha_model_path", type=str, default=None,
