@@ -543,8 +543,9 @@ def config_parser():
                         help='render the train set instead of render_poses path')  
     parser.add_argument("--render_mypath", action='store_true', 
                         help='render the test path')         
-    parser.add_argument("--render_factor", type=int, default=0, 
+    parser.add_argument("--render_factor", type=int, default=2, 
                         help='downsampling factor to speed up rendering, set 4 or 8 for fast preview')
+        # Original value = default = 0
 
     # training options
     parser.add_argument("--precrop_iters", type=int, default=0,
@@ -587,11 +588,12 @@ def config_parser():
                         help='frequency of tensorboard image logging')
     parser.add_argument("--i_weights", type=int, default=10000, 
                         help='frequency of weight ckpt saving')
-    parser.add_argument("--i_testset", type=int, default=30000, 
+    parser.add_argument("--i_testset", type=int, default=3000, 
                         help='frequency of testset saving')
             # Original value = default = 30000
-    parser.add_argument("--i_video",   type=int, default=49999, 
+    parser.add_argument("--i_video",   type=int, default=3500, 
                         help='frequency of render_poses video saving')
+            # Original value = default = 50000
     
     # debug
     parser.add_argument("--debug",  action='store_true')
